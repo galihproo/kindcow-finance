@@ -1,0 +1,41 @@
+{   "token"  :  {  "contract": "0x0917ed9cb1277e0190e1f5a208b75d8394294d1a",
+                    "name":"KIND",
+                    "digits":8
+                },
+    "master_contract":  {  "contract": "0x6921cc7E9F3aEe41a2D0D43f9B9FBC5066C1C4d5",
+                            "name":"NEATHERD",
+                            "digits":8
+                        },
+    "pid" : [{ "contract":"0x0917ed9cb1277e0190e1f5a208b75d8394294d1a",
+                    "token1":"0x4dabc43491123a6bfeba90c512aa9b343137beb0",
+                    "token2":"0x4dabc43491123a6bfeba90c512aa9b343137beb0",
+                    "type":"staking",
+                    "digits":8
+                } ,
+                { "contract":"0xf3a0b335806167e9023ead645d1172892edfcc97",
+                    "token1":"0x0917ed9cb1277e0190e1f5a208b75d8394294d1a",
+                    "token2":"0xe9e7cea3dedca5984780bafc599bd69add087d56",
+                    "type":"farm",
+                    "digits":18
+                },
+                { "contract":"0x38499e5a3cfb9a879761aed1eb60f6cb7d005dec",
+                    "token1":"0x0917ed9cb1277e0190e1f5a208b75d8394294d1a",
+                    "token2":"0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                    "type":"farm",
+                    "digits":18
+                } 
+                 
+    ],
+    "list_token" : [
+        ["KIND","0x0917ed9cb1277e0190e1f5a208b75d8394294d1a"],
+        ["BUSD","0xe9e7cea3dedca5984780bafc599bd69add087d56"],
+        ["WBNB","0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"]
+        
+        
+    ],
+    "price_feed" :[
+          ["WBST","bitsten","BST_USDT","USDT"],
+          ["BNB","bitsten","BNB_USDT","USDT"]
+    ] 
+    
+}
