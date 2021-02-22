@@ -98,6 +98,12 @@ var HANDLE ={
                 $('.your-lp-pid-'+pid)[x].innerHTML = number_format(res);
                } 
         } 
+        if($('.r-your-lp-pid-'+pid).length>0)
+        {   var x=0;
+            for(x=0;x<$('.r-your-lp-pid-'+pid).length;x++) {
+                $('.r-your-lp-pid-'+pid)[x].innerHTML =  res;
+               } 
+        } 
        
         
     }
@@ -106,9 +112,9 @@ var HANDLE ={
         if(res>=999999999){
         if ($('.get-approve-pid-'+pid).length>0) 
         document.getElementsByClassName('get-approve-pid-'+pid)[0].style.display = 'none';
-        if ($('.non-approve-pid-'+pid).length>0) 
+        if ($('.non-aproved-pid-'+pid).length>0) 
         document.getElementsByClassName('non-aproved-pid-'+pid)[0].style.display = 'none';
-        if ($('.approved-pid-'+pid).length>0) 
+        if ($('.aproved-pid-'+pid).length>0) 
         document.getElementsByClassName('aproved-pid-'+pid)[0].style.display = '';
 
         var wallet = getCookie("current-wallet");
@@ -181,6 +187,10 @@ var HANDLE ={
         if(document.getElementsByClassName('your-wallet-lp-pid-'+pid).length>0)
         {
         document.getElementsByClassName('your-wallet-lp-pid-'+pid)[0].innerHTML = number_format(res);
+        }
+        if(document.getElementsByClassName('r-your-wallet-lp-pid-'+pid).length>0)
+        {
+        document.getElementsByClassName('r-your-wallet-lp-pid-'+pid)[0].innerHTML =  res;
         }
 
        // console.log('data' + datas);

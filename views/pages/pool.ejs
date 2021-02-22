@@ -159,7 +159,7 @@
         <div class="modal-content" style="border-radius: 5%;">
           <div class="modal-header">
             <h5 class="modal-title col-12" id="exampleModalCenterTitle">Withdraw <span class=' sym-<%=  data.setting.pid[a].contract  %>'>TOKEN</span>  <span class='float-right your-lp-pid-<%=  a  %>'>0</span></h5>
-            
+            <span class='d-none r-your-lp-pid-<%=  a  %>'>0</span>
           </div>
           <div class="modal-body pb-0">
             <div class=" ">
@@ -167,6 +167,7 @@
               <div class="d-flex">
                 <input  type="text" class="form-control mr-2 col-10 text-center amount-withdraw-lp-pid-<%=  a  %> " placeholder="0" name="" id="">
                  <button class="btn btn-sm rounded-0 col-2  btn-success" style="width: 80px;border-radius:20%">MAX</button>
+                 <button class="btn btn-sm rounded-0 col-2  btn-success" style="width: 80px;border-radius:20%" onclick="$('.amount-withdraw-lp-pid-<%=  a  %>').val($('.r-your-lp-pid-<%=  a  %>').html())">MAX</button>
               
   
                 
@@ -194,14 +195,14 @@
         <div class="modal-content" style="border-radius: 5%;">
           <div class="modal-header">
             <h5 class="modal-title col-12" id="exampleModalCenterTitle">Deposit <span class=' sym-<%=  data.setting.pid[a].contract  %>'>TOKEN</span>  <span class='float-right your-wallet-lp-pid-<%=  a  %>'>0</span> </h5>
-           
+            <span class='d-none  r-your-wallet-lp-pid-<%=  a  %> resetform'>0</span>
           </div>
           <div class="modal-body pb-0">
             <div class=" ">
              
               <div class="d-flex">
                 <input  type="text" class="form-control mr-2 col-10 text-center amount-deposit-lp-pid-<%=  a  %>" placeholder="0" name="" id="">
-                 <button class="btn btn-sm rounded-0 col-2  btn-success" style="width: 80px;border-radius:20%">MAX</button>
+                <button class="btn btn-sm rounded-0 col-2  btn-success" style="width: 80px;border-radius:20%" onclick="$('.amount-deposit-lp-pid-<%=  a  %>').val($('.r-your-wallet-lp-pid-<%=  a  %>').html())">MAX</button>
               
   
                 
