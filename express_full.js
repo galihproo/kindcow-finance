@@ -33,11 +33,8 @@ app.get('/farms',function(req,res){
     res.render('pages/farm',{'data' :   data });
  });
 
+ 
  app.get('/',function(req,res){
-    res.send('home');
- });
-
- app.get('/home',function(req,res){
    var data = Array();
    data['setting']=Array();
    data["title"] = "Home";
