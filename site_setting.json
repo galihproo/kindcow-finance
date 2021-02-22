@@ -20,7 +20,13 @@
                 },
                 { "contract":"0x38499e5a3cfb9a879761aed1eb60f6cb7d005dec",
                     "token1":"0x0917ed9cb1277e0190e1f5a208b75d8394294d1a",
-                    "token2":"0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+                    "token2":"0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+                    "type":"farm",
+                    "digits":18
+                } ,
+                { "contract":"0x1b96b92314c44b159149f7e0303511fb2fc4774f",
+                    "token1":"0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+                    "token2":"0xe9e7cea3dedca5984780bafc599bd69add087d56",
                     "type":"farm",
                     "digits":18
                 } 
@@ -29,7 +35,7 @@
     "list_token" : [
         ["KIND","0x0917ed9cb1277e0190e1f5a208b75d8394294d1a"],
         ["BUSD","0xe9e7cea3dedca5984780bafc599bd69add087d56"],
-        ["WBNB","0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"]
+        ["WBNB","0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"]
         
         
     ],

@@ -35,3 +35,27 @@ allsym.forEach(b => {
 
  
 lt();
+
+
+setInterval(rate,30000);
+function rate(){
+
+    $.get( "price", function( data ) {
+        
+        for (const [key, value] of Object.entries(data.price)) {
+            var k = key.toLocaleLowerCase();
+            if($('.price-'+k).length>0)
+                {  
+                
+                console.log(k);
+                document.getElementsByClassName('price-'+k)[0].innerHTML = number_format(value);
+                }
+          }
+        
+        
+      });
+ 
+}
+
+ 
+rate();

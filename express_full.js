@@ -4,6 +4,7 @@ var path    = require("path");
 const port = 3000;
 const setting   =   require("./site_setting.json");
 const expressLayouts = require('express-ejs-layouts');
+var price       =   require("./js_backend/price.js");
 
 app.use(express.static(__dirname+"/"));
 
@@ -72,6 +73,11 @@ app.get('/single',function(req,res){
     res.render('pages/pool',{'data' :   data });
  });
 
+ app.get('/price',function(req,res){
+   res.setHeader('Content-Type', 'application/json');
+   console.log(price)
+   res.send(JSON.stringify(price));
+ });
 
 
 
