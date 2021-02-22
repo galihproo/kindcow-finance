@@ -10,7 +10,10 @@ allpid.forEach(b => {
  WALLET.getWalletLpBalance(a);
  WALLET.totalSupply(setting.token.contract);
  WALLET.burn(setting.token.contract,8,'0x0000000000000000000000000000000000000000');
- a++;
+
+
+a++;
+
 });
 }
 
@@ -41,7 +44,7 @@ setInterval(rate,30000);
 function rate(){
 
     $.get( "price", function( data ) {
-        
+        KINDPRICE = data.price.KIND;
         for (const [key, value] of Object.entries(data.price)) {
             var k = key.toLocaleLowerCase();
             if($('.price-'+k).length>0)
@@ -73,3 +76,25 @@ function rate(){
 
  
 rate();
+
+function apy(){
+    var a=0;
+ allpid.forEach(b => {
+
+ 
+ 
+    if($('.total-liq-pid-'+a).length>0){
+    
+    var lq=$('.total-liq-pid-'+a).html();
+    var rd=$('.block-reward-pid-'+a).html();
+    var apr =((rd*356)/lq)*100;
+if(apr>0)
+$('.apr-pid-'+a).html(number_format(apr,2)+"%");
+
+}
+a++;
+ });
+}
+
+setInterval(apy,5000);
+apy();

@@ -1,3 +1,4 @@
+var KINDPRICE = 0;
 var HANDLE ={
     Deposit : function(pid,res){
         console.log(res);
@@ -129,7 +130,7 @@ var HANDLE ={
     }
     ,
     PoolInfo : function (pid,res) {
-        var tokenprice = 1;
+        var tokenprice = KINDPRICE;
         var total_aloct = 12000;
         if ($('.alloc-pid-'+pid).length>0) 
         document.getElementsByClassName('alloc-pid-'+pid)[0].innerHTML = number_format(res[1],0);
