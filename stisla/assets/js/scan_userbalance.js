@@ -42,7 +42,7 @@ lt();
 
 setInterval(rate,30000);
 function rate(){
-
+    var tvl =0;
     $.get( "price", function( data ) {
         KINDPRICE = data.price.KIND;
         for (const [key, value] of Object.entries(data.price)) {
@@ -60,10 +60,17 @@ function rate(){
 
         
           for (const [a, value] of Object.entries(data.lp)) {
-         
+
+             tvl=tvl+ data.kind_lp[a];
             if($('.total-liq-pid-'+a).length>0)
                 {   
                 document.getElementsByClassName('total-liq-pid-'+a)[0].innerHTML = number_format(value*data.rate_lp[a]);
+                }
+
+
+                if($('.tvl').length>0)
+                {   
+                document.getElementsByClassName('tvl')[0].innerHTML = number_format(tvl);
                 }
 
             
@@ -79,9 +86,10 @@ rate();
 
 function apy(){
     var a=0;
+    
  allpid.forEach(b => {
 
- 
+   
  
     if($('.total-liq-pid-'+a).length>0){
     
