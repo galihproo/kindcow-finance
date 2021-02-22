@@ -50,6 +50,20 @@ function rate(){
                 console.log(k);
                 document.getElementsByClassName('price-'+k)[0].innerHTML = number_format(value);
                 }
+
+            
+          }
+
+
+        
+          for (const [a, value] of Object.entries(data.lp)) {
+         
+            if($('.total-liq-pid-'+a).length>0)
+                {   
+                document.getElementsByClassName('total-liq-pid-'+a)[0].innerHTML = number_format(value*data.rate_lp[a]);
+                }
+
+            
           }
         
         

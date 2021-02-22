@@ -34,7 +34,7 @@ app.get('/farms',function(req,res){
  });
 
  app.get('/',function(req,res){
-    res.render('pages/landing');
+    res.send('home');
  });
 
  app.get('/home',function(req,res){
