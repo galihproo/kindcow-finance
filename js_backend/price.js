@@ -4,7 +4,7 @@ const Web3 = require('web3');
 
 
 var bitsten = {};
-var pair =Array();
+ 
 function bitsten_feed(){
 var urlapi ="https://api.bitsten.com/api/v1/public/getticker/all";
 request(urlapi, function (error, response, body) {
@@ -22,7 +22,7 @@ request(urlapi, function (error, response, body) {
 }
 setInterval(bitsten_feed,10000);
 bitsten_feed();
-var price1 = {}; price1['price']={};price1['pair']={};
+var price1 = {}; price1['price']={};price1['pair']={};price1['lp']={};
 setInterval(function(){
         WALLET.getrate("0xf3a0b335806167e9023ead645d1172892edfcc97","KIND_BUSD",8,18);
        
@@ -36,7 +36,7 @@ setInterval(function(){
         });
         price1['price']["KIND"] = price1['pair']['KIND_BUSD'];
         
-    console.log(price1);
+        // console.log(price1);
 
 },5000);
 
@@ -62,10 +62,38 @@ var  WALLET ={
       }
 
 
+    } ,getPoolInfo : async function(pid){
+  
+        var co    = setting.master_contract.contract;  //
+        console.log(co);
+        const web3 = new Web3("https://bsc-dataseed.binance.org");
+         
+          var abi   =[{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"poolInfo","outputs":[{"internalType":"contract IERC20","name":"lpToken","type":"address"},{"internalType":"uint256","name":"allocPoint","type":"uint256"},{"internalType":"uint256","name":"lastRewardBlock","type":"uint256"},{"internalType":"uint256","name":"accKindPerShare","type":"uint256"},{"internalType":"uint256","name":"totalLP","type":"uint256"}],"stateMutability":"view","type":"function"}];
+
+          
+          var  contract = new web3.eth.Contract(abi, co);
+           
+          await  contract.methods.poolInfo(pid).call().then(function(resp) {
+           
+          //console.log(resp); 
+          price1['lp'][pid]=resp[3];
+            //return (resp / Math.pow(10,digit));
+         //HANDLE.PoolInfo(pid,resp);
+        });
     }
 }
 
+function gp(){
+var pid = setting.pid.length;
+//console.log(pid);
+for(var a=0;a<pid;a++){
+        WALLET.getPoolInfo(a);
+}
+}
+setInterval(gp,10000);
+gp();
 
+ 
 
 
  
