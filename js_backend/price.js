@@ -169,7 +169,8 @@ for(var a=0;a<pid;a++){
         WALLET.getSupply(a); 
         WALLET.getWalletLpBalance('0xe9e7cea3dedca5984780bafc599bd69add087d56',a,'busd',setting.pid[a].contract,18);
         WALLET.getWalletLpBalance('0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',a,'wbnb',setting.pid[a].contract,18);
-        WALLET.getWalletLpBalance(setting.pid[a].contract,a,'kind',setting.pid[a].contract,setting.pid[a].digits);
+        WALLET.getWalletLpBalance('0x0917ed9cb1277e0190e1f5a208b75d8394294d1a',a,'kind',setting.pid[a].contract,8);
+        
       
 }
 

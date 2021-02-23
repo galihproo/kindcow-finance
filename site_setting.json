@@ -29,13 +29,22 @@
                     "token2":"0xe9e7cea3dedca5984780bafc599bd69add087d56",
                     "type":"farm",
                     "digits":18
+                } ,
+                { "contract":"0x11480381b441ce6381f7589b90be7e3acad317eb",
+                    "token1":"0x0917ed9cb1277e0190e1f5a208b75d8394294d1a",
+                    "token2":"0x7979f6c54eba05e18ded44c4f986f49a5de551c2",
+                    "type":"farm",
+                    "digits":18
                 } 
+                
                  
     ],
     "list_token" : [
         ["KIND","0x0917ed9cb1277e0190e1f5a208b75d8394294d1a"],
         ["BUSD","0xe9e7cea3dedca5984780bafc599bd69add087d56"],
-        ["WBNB","0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"]
+        ["WBNB","0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"],
+        ["KEBAB","0x7979f6c54eba05e18ded44c4f986f49a5de551c2"]
+        
         
         
     ],
